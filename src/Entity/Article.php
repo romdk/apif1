@@ -15,7 +15,7 @@ use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
     normalizationContext: ['groups' => ['read:collection', 'read:Article']],
     denormalizationContext: ['groups' => ['write:Article']],
 )]
-#[ApiFilter(SearchFilter::class, properties: ['ecurie' => 'exact', 'pilote' => 'exact'])]
+#[ApiFilter(SearchFilter::class, properties: ['ecurie.idApi' => 'exact', 'pilote.idApi' => 'exact'])]
 class Article
 {
     #[ORM\Id]
